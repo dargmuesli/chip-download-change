@@ -27,7 +27,7 @@ for (var i = 0, length = links.length; i < length; i++) {
     } else {
       jsLink2 = link;
     }
-    //Find a manual download link
+    //Find a "manual" download link
   } else if (regexB.test(link.href)) {
     //Save first and second (last) link
     if (manualLink1 == null) {
