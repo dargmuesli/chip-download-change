@@ -14,7 +14,7 @@
 // ==/UserScript==
 var jsLink1 = jsLink2 = manualLink1 = manualLink2 = null;
 var links = document.getElementsByTagName('a');
-var regexA = /javascript:DSinitDl.+/;
+var regexA = /javascript:DownloadStartInit.+/;
 var regexB = /(.+x\.chip\.de\/intern\/dl.+)/;
 //Check every link
 for (var i = 0, length = links.length; i < length; i++) {
@@ -37,7 +37,7 @@ for (var i = 0, length = links.length; i < length; i++) {
     }
     //Replace text if there is a javascript link
     if (jsLink1 != null) {
-      link.innerHTML = 'Chip-Installer';
+      link.innerHTML = link.innerHTML.replace('Manuelle Installation', 'Chip-Installer');
     }
   }
 }
